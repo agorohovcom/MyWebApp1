@@ -1,1 +1,7 @@
+com/agorohov/spring/mywebapp1/aspect/MyLoggingAspect.class
+com/agorohov/spring/mywebapp1/dao/ContactDAO.class
+com/agorohov/spring/mywebapp1/entity/Contact.class
+com/agorohov/spring/mywebapp1/dao/ContactDAOImpl.class
+com/agorohov/spring/mywebapp1/service/ContactService.class
 com/agorohov/spring/mywebapp1/controller/MyController.class
+com/agorohov/spring/mywebapp1/service/ContactServiceImpl.class

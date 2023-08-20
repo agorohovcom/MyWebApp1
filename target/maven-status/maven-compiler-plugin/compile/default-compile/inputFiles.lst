@@ -1,1 +1,7 @@
+/home/agorohov/Java Projects/MyWebApp1/src/main/java/com/agorohov/spring/mywebapp1/service/ContactService.java
+/home/agorohov/Java Projects/MyWebApp1/src/main/java/com/agorohov/spring/mywebapp1/entity/Contact.java
+/home/agorohov/Java Projects/MyWebApp1/src/main/java/com/agorohov/spring/mywebapp1/dao/ContactDAOImpl.java
+/home/agorohov/Java Projects/MyWebApp1/src/main/java/com/agorohov/spring/mywebapp1/service/ContactServiceImpl.java
 /home/agorohov/Java Projects/MyWebApp1/src/main/java/com/agorohov/spring/mywebapp1/controller/MyController.java
+/home/agorohov/Java Projects/MyWebApp1/src/main/java/com/agorohov/spring/mywebapp1/aspect/MyLoggingAspect.java
+/home/agorohov/Java Projects/MyWebApp1/src/main/java/com/agorohov/spring/mywebapp1/dao/ContactDAO.java

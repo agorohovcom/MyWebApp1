@@ -12,6 +12,14 @@
         <title>MyWebApp1 first-view Welcome Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Здорова!</h1>
+        </br>
+        </br>
+        <h2>Там ниже кнопочка. Жмакни, и получишь список контактов из БД =)</h2>
+        </br>
+        </br>
+        
+        <input type="button" value="Contacts"
+               onclick="window.location.href='allContacts'"/>
     </body>
 </html>
