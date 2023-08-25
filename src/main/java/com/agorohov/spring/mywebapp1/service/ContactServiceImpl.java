@@ -19,5 +19,11 @@ public class ContactServiceImpl implements ContactService{
     public List<Contact> getAllContacts() {
         return contactDAO.getAllContacts();
     }
+
+    @Override
+    @Transactional
+    public void saveContact(Contact contact) {
+        contactDAO.saveContact(contact);
+    }
     
 }

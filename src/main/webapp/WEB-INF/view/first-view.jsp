@@ -1,9 +1,3 @@
-<%-- 
-    Document   : first-view
-    Created on : 20 авг. 2023 г., 13:24:28
-    Author     : agorohov
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,7 +13,7 @@
         </br>
         </br>
         
-        <input type="button" value="Contacts"
+        <input type="button" value="Show contacts"
                onclick="window.location.href='allContacts'"/>
     </body>
 </html>

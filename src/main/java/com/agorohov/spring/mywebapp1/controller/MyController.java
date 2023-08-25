@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -26,5 +27,22 @@ public class MyController {
         model.addAttribute("allContacts", contacts);
         
         return "all-contacts";
+    }
+    
+    @RequestMapping("/addNewContact")
+    public String addNewContact(Model model){
+        
+        Contact contact = new Contact();
+        model.addAttribute("contact", contact);
+        
+        return "contact-edit";
+    }
+    
+    @RequestMapping("/saveContact")
+    public String saveContact(@ModelAttribute("contact") Contact contact){
+        
+        contactServise.saveContact(contact);
+        
+        return "redirect:/allContacts";
     }
 }

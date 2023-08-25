@@ -30,5 +30,8 @@
             </c:forEach>
                 
         </table>
+        </br>
+        <input type="button" value="New contact" 
+               onclick="window.location.href='addNewContact'"/>
     </body>
 </html>

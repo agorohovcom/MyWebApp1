@@ -6,5 +6,6 @@ import java.util.List;
 public interface ContactDAO {
     
     public List<Contact> getAllContacts();
+    public void saveContact(Contact contact);
     
 }
