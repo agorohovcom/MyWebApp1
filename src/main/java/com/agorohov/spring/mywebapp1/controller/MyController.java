@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MyController {
@@ -42,6 +43,21 @@ public class MyController {
     public String saveContact(@ModelAttribute("contact") Contact contact){
         
         contactServise.saveContact(contact);
+        
+        return "redirect:/allContacts";
+    }
+    
+    @RequestMapping("/updateContact")
+    public String updateContact(@RequestParam("cId") int id, Model model){
+        Contact contact = contactServise.getContact(id);
+        model.addAttribute("contact", contact);
+        
+        return "contact-edit";
+    }
+    
+    @RequestMapping("/deleteContact")
+    public String deleteContact(@RequestParam("cId") int id){
+        contactServise.deleteContact(id);
         
         return "redirect:/allContacts";
     }

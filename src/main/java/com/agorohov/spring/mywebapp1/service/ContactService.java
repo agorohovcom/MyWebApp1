@@ -7,5 +7,7 @@ public interface ContactService {
     
     public List<Contact> getAllContacts();
     public void saveContact(Contact contact);
+    public Contact getContact(int id);
+    public void deleteContact(int id);
     
 }

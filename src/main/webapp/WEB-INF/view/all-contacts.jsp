@@ -7,7 +7,7 @@
         <title>All Contacts</title>
     </head>
     <body>
-        <h2>Here are the all contacts</h2>
+        <h2>Here are all contacts</h2>
         </br>
         </br>
 
@@ -17,14 +17,30 @@
                 <th>Phone number</th>
                 <th>Email</th>
                 <th>Description</th>
+                <th>Operations</th>
             </tr>
 
-            <c:forEach var="contact" items="${allContacts}">
+            <c:forEach var="cntct" items="${allContacts}">
+                
+                <c:url var="editButton" value="/updateContact">
+                    <c:param name="cId" value="${cntct.id}"/>
+                </c:url>
+                <c:url var="deleteButton" value="/deleteContact">
+                    <c:param name="cId" value="${cntct.id}"/>
+                </c:url>
+                
                 <tr>
-                    <td>${contact.name}</td>
-                    <td>${contact.phoneNumber}</td>
-                    <td>${contact.email}</td>
-                    <td>${contact.description}</td>
+                    <td>${cntct.name}</td>
+                    <td>${cntct.phoneNumber}</td>
+                    <td>${cntct.email}</td>
+                    <td>${cntct.description}</td>
+                    
+                    <td>
+                        <input type="button" value="Edit"
+                               onclick="window.location.href='${editButton}'"/>
+                        <input type="button" value="Delete"
+                               onclick="window.location.href='${deleteButton}'"/>
+                    </td>
                 </tr>
 
             </c:forEach>
@@ -32,6 +48,6 @@
         </table>
         </br>
         <input type="button" value="New contact" 
-               onclick="window.location.href='addNewContact'"/>
+               onClick="window.location.href='addNewContact'"/>
     </body>
 </html>
